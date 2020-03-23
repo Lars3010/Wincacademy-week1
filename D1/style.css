@@ -1,0 +1,108 @@
+@import url(‘https://fonts.googleapis.com/css?family=Lato:400,700&display=swap’);
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+#cards-container {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 300px;
+    width: 680px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card {
+    width: 328px;
+    height: 200px;
+    border: 2px solid #d4d4d5;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 17px auto 17px;
+    grid-template-rows: 17px 112px auto 17px;
+    grid-template-areas: 
+        ". . ."
+        ". card-content ."
+        ". card-buttons ."
+        ". . ." ;
+    
+}
+
+.card h1, h2, img, p {
+    padding: 0;
+    margin: 0;
+}
+
+.card-content-container {
+    grid-area: card-content;
+    display: grid;
+    grid-template-columns: auto 40px;
+    grid-template-rows: 40px 18px 40px auto;
+    grid-template-areas: 
+    "card-titles card-image"
+    ". ."
+    "card-message card-message"
+    ". .";
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.card-title, .card-subtitle {
+    grid-area: card-titles;
+}
+
+.card-title {
+    font-size: 16pt;
+}
+
+.card-subtitle {
+    font-size: 14pt;
+    color: #999999;
+    font-weight: lighter;
+}
+
+.card-profile-picture {
+    grid-area: card-image;
+}
+
+.card-message {
+    grid-area: card-message;
+    font-size: 12pt;
+    color: #525252;
+}
+
+.card-button-container {
+    grid-area: card-buttons;
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+}
+
+.card-button-approve, .card-button-decline {
+    height: 40px;
+    width: 148px;
+    background-color: #fff;
+    border-style: none;
+    font-size: 12pt;
+    
+}
+
+.card-button-approve {
+    border-top: 2px solid #00bf2c;
+    border-left: 2px solid #00bf2c;
+    border-bottom: 2px solid #00bf2c;
+    border-radius: 5px 0px 0px 5px;
+    color: #00bf2c;
+
+}
+
+.card-button-decline {
+    border-top: 2px solid #ee0016;
+    border-left: 2px solid #ee0016;
+    border-bottom: 2px solid #ee0016;
+    border-right: 2px solid #ee0016;
+    border-radius: 0px 5px 5px 0px;
+    color: #ee0016;
+}
